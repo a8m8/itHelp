@@ -15,11 +15,12 @@ public class Search {
         return this.intArray;
     }
 
-    Search(int i) throws NegativeArraySizeException {
+    Search(int i){
         this.intArray = init(i);
     }
 
-    private int[] init(int i) throws  NegativeArraySizeException {
+    private int[] init(int i) {
+        if (i < 0) throw new NegativeArraySizeException("Array size cannot be negative");
         int [] array = new int [i];
         for (int j=0; j < array.length - 1; j++) {
             array[j] = new Random().nextInt(Integer.MAX_VALUE);
