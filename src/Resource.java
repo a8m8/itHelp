@@ -11,4 +11,6 @@ public class Resource {
         if(capacity < 0) throw new IllegalResourceException();
         return capacity;
     }
+
+
 }

@@ -11,4 +11,8 @@ public class Utils {
     }
 
 
+    public static <T> T arrayIndexSearcher(T[] array, int index) {
+        return array[index];
+    }
+
 }
