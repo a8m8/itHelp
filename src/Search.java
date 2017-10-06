@@ -5,22 +5,15 @@ public class Search {
 
     private int [] intArray;
 
-    public void printArr() {
-        for(int i: intArray) {
-            System.out.println(i + " ");
-        }
-    }
-
     public int[] getIntArray() {
         return this.intArray;
     }
 
-    Search(int i){
+    Search(int i)  {
         this.intArray = init(i);
     }
 
-    private int[] init(int i) {
-        if (i < 0) throw new NegativeArraySizeException("Array size cannot be negative");
+    private int[] init(int i) throws  NegativeArraySizeException {
         int [] array = new int [i];
         for (int j=0; j < array.length - 1; j++) {
             array[j] = new Random().nextInt(Integer.MAX_VALUE);
